@@ -19,20 +19,21 @@ and for password decreption we are using CryptoJS as well as we have used Jwt (j
 ### USERS ROUTER
 
 <h5>update profile data</h5>
-1. `update api` : user can able to update user data like username, password, email anything user can able to do. either user(owner) or Admin can able to update profile. for that we have used authentication that the persons id is present in database that that password which match to the tokens password. user id and params id need to be match then old they can able to update profile
 
-//delete profile from database
+1) `update api` : user can able to update user data like username, password, email anything user can able to do. either user(owner) or Admin can able to update profile. for that we have used authentication that the persons id is present in database that that password which match to the tokens password. user id and params id need to be match then old they can able to update profile
+
+<h5>delete profile from database</h5>
 2.`delete api` : it works exactly same as update here they check that user id and which id come from params both need to be same then only they can able to delete profile.
 
-//we can get any user 
+<h5>we can get any user </h5>
 3.`get api`: using get method if I want to see someone else profile I can able to get it.In get i dont want that I can see others password so that I only return the info portion. and password I am not able to see. for that destructure method help me to do that.
 
-//see all the users 
+<h5>see all the users </h5>
 4. `get api`: see all users if you are not admin then you are not need to see all users to see profile. to see all profile you need to verify (Authentication and Authorization ) if you are fetching millions of data for that I have used limit so that only 5 profile you can able to see at a time and it fetch last 5 users so that new registed Profile Admin can able to fetch.If Admin dont want new user then it show the all users. The main thing here is that if You are Admin then only you can able to see profile otherwise you can't.
 
 
-//get All new users in this month
-5. `get stat api`: in this api Admin can able to see how many users are registers in this month. for that I have used addregation method $project and $group.($group is used to group input documents by the specified _id expression and for each distinct grouping, outputs a document. $project is used to pass along the documents with the requested fields to the next stage in the pipeline.). to find month we are using $project (it help me to get current month)
+<h5>get All new users in this month</h5>
+5) `get stat api`: in this api Admin can able to see how many users are registers in this month. for that I have used addregation method $project and $group.($group is used to group input documents by the specified _id expression and for each distinct grouping, outputs a document. $project is used to pass along the documents with the requested fields to the next stage in the pipeline.). to find month we are using $project (it help me to get current month)
 $group help me to get all the total new users
 
 
