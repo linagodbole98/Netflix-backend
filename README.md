@@ -23,13 +23,13 @@ and for password decreption we are using CryptoJS as well as we have used Jwt (j
 1) `update api` : user can able to update user data like username, password, email anything user can able to do. either user(owner) or Admin can able to update profile. for that we have used authentication that the persons id is present in database that that password which match to the tokens password. user id and params id need to be match then old they can able to update profile
 
 <h5>delete profile from database</h5>
-2.`delete api` : it works exactly same as update here they check that user id and which id come from params both need to be same then only they can able to delete profile.
+2) `delete api` : it works exactly same as update here they check that user id and which id come from params both need to be same then only they can able to delete profile.
 
 <h5>we can get any user </h5>
-3.`get api`: using get method if I want to see someone else profile I can able to get it.In get i dont want that I can see others password so that I only return the info portion. and password I am not able to see. for that destructure method help me to do that.
+3) `get api`: using get method if I want to see someone else profile I can able to get it.In get i dont want that I can see others password so that I only return the info portion. and password I am not able to see. for that destructure method help me to do that.
 
 <h5>see all the users </h5>
-4. `get api`: see all users if you are not admin then you are not need to see all users to see profile. to see all profile you need to verify (Authentication and Authorization ) if you are fetching millions of data for that I have used limit so that only 5 profile you can able to see at a time and it fetch last 5 users so that new registed Profile Admin can able to fetch.If Admin dont want new user then it show the all users. The main thing here is that if You are Admin then only you can able to see profile otherwise you can't.
+4)  `get api`: see all users if you are not admin then you are not need to see all users to see profile. to see all profile you need to verify (Authentication and Authorization ) if you are fetching millions of data for that I have used limit so that only 5 profile you can able to see at a time and it fetch last 5 users so that new registed Profile Admin can able to fetch.If Admin dont want new user then it show the all users. The main thing here is that if You are Admin then only you can able to see profile otherwise you can't.
 
 
 <h5>get All new users in this month</h5>
@@ -41,20 +41,20 @@ $group help me to get all the total new users
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### MOVIE ROUTER
 
-//create new movie
-1.`post api` : create movie In which Admin can able to add the movie.If you are not admin you cant able to Add movie. to check authentication we have used middleware function between req and res cycle.[to verify authentication and autorization]. 
+<h4>create new movie</h4>
+1) `post api` : create movie In which Admin can able to add the movie.If you are not admin you cant able to Add movie. to check authentication we have used middleware function between req and res cycle.[to verify authentication and autorization]. 
 
-//admin can able to update movie.
-2. `update api`: admin can able to update movie. like new name or descrption about movie inpy admin can able to do that so authorization is checked over here.
+<h4>admin can able to update movie.</h4>
+2)  `update api`: admin can able to update movie. like new name or descrption about movie inpy admin can able to do that so authorization is checked over here.
 
-3.`get api`: use to get perticular movie
+3) `get api`: use to get perticular movie
 
-//delete movie
-4.`delete api` : admin can able to delete the movie.whatever movie is selected this movie is deleted by Admin.
+<h4>delete movie</h4>
+4) `delete api` : admin can able to delete the movie.whatever movie is selected this movie is deleted by Admin.
 
 
-// choose random movie to delete
-5.`delete api` : Here Admin can able to delete random movies but if type is series it return all series if Admin type movies it return movies. to find the type we have used 2 aggregation function $match and $sample. it return all the data in Array format.in Model I have used isSeries keyword if that true then return series else movies
+<h4> choose random movie to delete </h4>
+5) `delete api` : Here Admin can able to delete random movies but if type is series it return all series if Admin type movies it return movies. to find the type we have used 2 aggregation function $match and $sample. it return all the data in Array format.in Model I have used isSeries keyword if that true then return series else movies
 
 $match- The MongoDB $match operator filters the documents to pass only those documents that match the specified condition(s) to the next pipeline stage
 
@@ -63,17 +63,17 @@ $sample - Randomly selects the specified number of documents from the input docu
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### LIST ROUTER
 
-//when i visit the home page i can able to see the list of movies, serie,homepage. when i click series button it can able to able 10 series.
-when I click the movies it can able to fetch 10 movies.
+<h4>when i visit the home page i can able to see the list of movies, serie,homepage. when i click series button it can able to able 10 series.</h4>
+<h4>when I click the movies it can able to fetch 10 movies.</h4>
 
-//set all 10 movies
-1. `post api` : which 10 movies user can see is set by Admin so admin can able to set all this 10 movies in any order. in which all the list id we are getting in the foem of array.
+<h4>set all 10 movies</h4>
+1) `post api` : which 10 movies user can see is set by Admin so admin can able to set all this 10 movies in any order. in which all the list id we are getting in the foem of array.
 
-//delete the list
-2. `delete api` : here we can able to delete all the list
+<h4>delete the list</h4>
+2) `delete api` : here we can able to delete all the list
 
-//get all the list
-3. `get api`:get all the list according to type we want.like if you want horror then all horror movies list will able to see. either you can able to fetch by type or genre.
+<h4>get all the list</h4>
+3) `get api`:get all the list according to type we want.like if you want horror then all horror movies list will able to see. either you can able to fetch by type or genre.
 
 
 
