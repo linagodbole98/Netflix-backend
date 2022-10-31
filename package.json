@@ -1,0 +1,31 @@
+{
+  "name": "netflix-backend",
+  "version": "1.0.0",
+  "description": "This is backend of netflix where i have used nodejs and mongodb to create this and we are using lastest packages and technology to build this.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linagodbole98/Netflix-backend.git"
+  },
+  "author": "Lina Godbole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linagodbole98/Netflix-backend/issues"
+  },
+  "homepage": "https://github.com/linagodbole98/Netflix-backend#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^4.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  }
+}
