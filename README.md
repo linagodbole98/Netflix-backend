@@ -5,15 +5,18 @@ This project consist of 15 api in this project i have written the logic of all a
 --------------------------------------------------------------
 
 # MODELS:
-### AUTH MODEL
 
-1) post api : A profile created for the netflix mainly usename, email and password is mandatory field. in password field I have used validation like more than 8 character and less than 15 character must used. here for password encryption i have used CryptoJS package which encrypt password using  AES algorithm.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### AUTH ROUTER
 
-2) login Api: In this api Bacially if user have already account then they can abke to enter by using email and password for email verification we check that is this email is valid and already present in my database.
+1) `post api` : A profile created for the netflix mainly usename, email and password is mandatory field. in password field I have used validation like more than 8 character and less than 15 character must used. here for password encryption i have used CryptoJS package which encrypt password using  AES algorithm.
+
+2) `login Api`: In this api Bacially if user have already account then they can abke to enter by using email and password for email verification we check that is this email is valid and already present in my database.
 and for password decreption we are using CryptoJS as well as we have used Jwt (jsonwebtoken) to check for authentication. using jwt.sign() method here token will be create.
 
 
-### USERS MODEL
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### USERS ROUTER
 
 //update profile data
 1) update api : user can able to update user data like username, password, email anything user can able to do. either user(owner) or Admin can able to update profile. for that we have used authentication that the persons id is present in database that that password which match to the tokens password. user id and params id need to be match then old they can able to update profile
@@ -34,7 +37,8 @@ $group help me to get all the total new users
 
 
 
-### MOVIE MODEL
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### MOVIE ROUTER
 
 //create new movie
 1)post api : create movie In which Admin can able to add the movie.If you are not admin you cant able to Add movie. to check authentication we have used middleware function between req and res cycle.[to verify authentication and autorization]. 
@@ -55,8 +59,8 @@ $match- The MongoDB $match operator filters the documents to pass only those doc
 
 $sample - Randomly selects the specified number of documents from the input documents.
 
-
-# LIST MODEL
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### LIST ROUTER
 
 //when i visit the home page i can able to see the list of movies, serie,homepage. when i click series button it can able to able 10 series.
 when I click the movies it can able to fetch 10 movies.
